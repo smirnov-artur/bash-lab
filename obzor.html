@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BASH LAB — сайт для рекламы: что сделано</title>
+<link rel="icon" href="assets/img/bl.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f5efe9;--paper:#fbf8f5;--ink:#191313;--ink2:#4a3f3d;--line:#e3d8d1;--blush:#f1dfe2;--rose:#9c5568;--pad:clamp(18px,4vw,56px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ivory);color:var(--ink);font:300 17px/1.6 'Jost',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+.top{display:flex;align-items:center;gap:14px;padding:28px 0;font:300 14px 'Jost';letter-spacing:.4em}
+.top img{width:30px;height:30px}
+h1{font:400 clamp(40px,6vw,84px)/1.05 'Prata',Georgia,serif;margin:40px 0 18px}
+h2{font:400 clamp(28px,3.4vw,46px)/1.1 'Prata',Georgia,serif;margin-bottom:26px}
+.eyebrow{font:500 12px 'Jost';letter-spacing:.2em;text-transform:uppercase;color:var(--rose)}
+.lead{max-width:40em;color:var(--ink2)}
+section{padding:clamp(56px,9vh,100px) 0;border-top:1px solid var(--line)}
+.hero{padding-bottom:40px;border:0}
+.cta{display:inline-flex;align-items:center;height:54px;padding:0 28px;margin-top:28px;background:var(--ink);color:var(--ivory);text-decoration:none;font:500 12px 'Jost';letter-spacing:.18em;text-transform:uppercase}
+.asked{list-style:none;counter-reset:n}
+.asked li{display:grid;grid-template-columns:56px 1fr 1fr;gap:12px 28px;padding:26px 0;border-bottom:1px solid var(--line);counter-increment:n}
+.asked li::before{content:counter(n,decimal-leading-zero);font:400 28px 'Prata',serif;color:var(--rose)}
+.asked q{font:400 20px/1.35 'Prata',serif;quotes:"«" "»"}
+.asked .nq{quotes:none}
+.asked small{display:block;margin-top:6px;font:400 11px 'Jost';letter-spacing:.14em;text-transform:uppercase;color:#8b7f7a}
+.asked .done{color:var(--ink2)}
+.asked .done b{color:var(--ink);font-weight:500}
+.ok{display:inline-block;margin-right:8px;color:#3d7a52;font-weight:500}
+.pages{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.pages a{display:block;text-decoration:none}
+.pages .im{position:relative;aspect-ratio:9/14;overflow:hidden;background:var(--blush)}
+.pages img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.1,1)}
+.pages a:hover img{transform:scale(1.05)}
+.pages b{display:block;margin-top:12px;font:400 22px 'Prata',serif}
+.pages span{font:400 12px 'Jost';letter-spacing:.14em;text-transform:uppercase;color:#8b7f7a}
+.pages span a{display:inline;text-decoration:underline;text-underline-offset:3px}
+.plus{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px;list-style:none}
+.plus li{padding:20px 0;border-bottom:1px solid var(--line)}
+.plus b{display:block;font:400 21px 'Prata',serif;margin-bottom:4px}
+.plus span{color:var(--ink2);font-size:16px}
+.need{list-style:none;max-width:46em}
+.need li{padding:14px 0 14px 28px;border-bottom:1px solid var(--line);position:relative}
+.need li::before{content:"";position:absolute;left:0;top:26px;width:12px;height:1px;background:var(--rose)}
+.card{background:linear-gradient(170deg,#f8ebee,#efdade);padding:clamp(24px,4vw,48px);color:var(--ink2)}
+code{font:400 14px ui-monospace,Consolas,monospace;background:rgba(255,255,255,.6);padding:2px 6px}
+.foot{padding:40px 0 60px;font:400 12px 'Jost';letter-spacing:.14em;text-transform:uppercase;color:#8b7f7a}
+@media (max-width:820px){
+  .asked li{grid-template-columns:40px 1fr}
+  .asked .done{grid-column:2}
+  .pages{grid-template-columns:repeat(2,1fr)}
+  .plus{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><img src="assets/img/bl.svg" alt="">BASH LAB</div>
+
+  <div class="hero">
+    <p class="eyebrow">Сайт для рекламы в Google · Business Bay, Дубай</p>
+    <h1>Кристина, вот что получилось</h1>
+    <p class="lead">Сначала — то, что вы просили, по пунктам и вашими словами, со ссылками, где это на сайте. Ниже — что мы добавили сверху из ваших же материалов.</p>
+    <a class="cta" href="ru/manicure.html">Открыть сайт</a>
+  </div>
+
+  <section>
+    <p class="eyebrow">Что вы просили</p>
+    <h2>Пять пунктов — все на месте</h2>
+    <ol class="asked">
+      <li><div><q>Одностраничный не эффективно для рекламы</q><small>и Ксения: «на каждый раздел нужна страничка»</small></div>
+        <div class="done"><span class="ok">✓</span><b>5 отдельных страниц</b> — по одной на каждый раздел вашего прайса: маникюр, педикюр, наращивание ресниц, брови и ресницы, комбо. У каждой свой адрес, под каждую можно вести свою рекламную группу.</div></li>
+      <li><div><q>Мы сайт только для рекламы делаем</q></div>
+        <div class="done"><span class="ok">✓</span>На первом экране каждой страницы сразу <b>услуга, цена «от» и кнопки записи</b>. Отдельной главной нет — человек с объявления попадает прямо на свою услугу.</div></li>
+      <li><div><q>Нам одинаково важны русский и англ</q></div>
+        <div class="done"><span class="ok">✓</span><b>Каждая страница на двух языках</b>, переключатель EN / RU в шапке. Цены, составы услуг и уровни мастеров переведены, названия комбо оставлены вашими.</div></li>
+      <li><div><q class="nq">Ваш прайс</q><small>6 скриншотов сторис PRICE от 3 октября</small></div>
+        <div class="done"><span class="ok">✓</span><b>Все позиции и цены один в один</b>, три уровня — Master, Top Master, VIP Master, в AED. Оформлено как ваша розовая карточка из сторис. <a href="ru/manicure.html#prices">Посмотреть прайс</a></div></li>
+      <li><div><q>У дубайцев основной способ связи — вотсап</q><small>Ксения</small></div>
+        <div class="done"><span class="ok">✓</span><b>Запись в WhatsApp с подставленной услугой</b>: нажимаете на цену — открывается сообщение «Здравствуйте! Хочу записаться: Маникюр с гель-лаком, Топ-мастер (250 AED)». Админу не нужно переспрашивать.</div></li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="eyebrow">Пять страниц</p>
+    <h2>Под каждое объявление — своя</h2>
+    <div class="pages">
+      <a href="ru/manicure.html"><div class="im"><img src="assets/video/mani-satin.webp" alt=""></div><b>Маникюр</b></a>
+      <a href="ru/pedicure.html"><div class="im"><img src="assets/video/pedi-french.webp" alt=""></div><b>Педикюр</b></a>
+      <a href="ru/lashes.html"><div class="im"><img src="assets/video/lash-open.webp" alt=""></div><b>Ресницы</b></a>
+      <a href="ru/brows.html"><div class="im"><img src="assets/video/brow-map.webp" alt=""></div><b>Брови и ресницы</b></a>
+      <a href="ru/combos.html"><div class="im"><img src="assets/video/combo-top.webp" alt=""></div><b>Комбо 4 и 6 рук</b></a>
+    </div>
+    <p class="lead" style="margin-top:22px">Английские версии: <a href="manicure.html">manicure</a> · <a href="pedicure.html">pedicure</a> · <a href="lashes.html">lashes</a> · <a href="brows.html">brows</a> · <a href="combos.html">combos</a></p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Что добавили сверху</p>
+    <h2>Из ваших же материалов</h2>
+    <ul class="plus">
+      <li><b>Ваши видео и фото</b><span>Рилсы и разделы Instagram — NAILS, LASHES, 6HANDS COMBO, BASH LAB. Ничего чужого и стокового.</span></li>
+      <li><b>Сцена «руки»</b><span>По прокрутке вокруг клиентки появляются мастера: 2 → 4 → 6 → 10 рук, на каждом шаге — ваше комбо с ценой.</span></li>
+      <li><b>Утро в Bash Lab</b><span>На странице комбо ваш рилс «10 рук» листается прокруткой: 10:00 → 10:25 → 11:02 → 12:10.</span></li>
+      <li><b>Отзывы клиенток</b><span>Из вашего раздела REWIEW — живые сторис клиенток.</span></li>
+      <li><b>Салон и основательница</b><span>Вход, адрес, ссылка на Google Maps, блок «Основательница — Кристина Баш».</span></li>
+      <li><b>Онлайн-запись</b><span>Кнопка «Онлайн-запись» ведёт в ваш Altegio, рядом — WhatsApp.</span></li>
+      <li><b>Вопросы</b><span>Короткие ответы: сколько длится, чем отличаются уровни мастеров, где вы находитесь.</span></li>
+      <li><b>Учёт заявок для рекламы</b><span>Каждое нажатие «Онлайн-запись» и WhatsApp считается конверсией — Ксения видит, какое объявление привело клиентку.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="eyebrow">Для Ксении</p>
+    <h2>Реклама и конверсии</h2>
+    <div class="card">
+      <p>События уже на сайте: <code>book_online_click</code> (онлайн-запись) и <code>whatsapp_click</code> (WhatsApp и каждая цена — с услугой, уровнем и суммой). Метки объявления <code>utm_*</code> и <code>gclid</code> переходят в ссылку онлайн-записи. Нужен только номер контейнера Google Tag Manager — подключим одной строкой.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Что нужно от вас</p>
+    <h2>Чтобы запустить рекламу</h2>
+    <ul class="need">
+      <li>Подтвердить цены комбо: в сторис PRICE Six Hands Glow — 510 AED, в OFFERS — 499 AED. На сайте сейчас 510.</li>
+      <li>Часы работы и ссылку на профиль в Google.</li>
+      <li>Домен, если уже есть, — или подберём.</li>
+      <li>По желанию — оригиналы видео без сжатия Instagram: на большом экране картинка станет заметно чище.</li>
+    </ul>
+  </section>
+
+  <div class="foot">BASH LAB Beauty Salon L.L.C · Bayswater Tower, Shop G06, Marasi Drive, Business Bay, Dubai</div>
+</div>
+</body>
+</html>
