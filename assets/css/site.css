@@ -121,16 +121,14 @@ html.wiping .wipe{transform:none}
 :lang(ru) .fl,:lang(ru) .fr{font-style:normal;font-size:clamp(30px,4.2vw,76px)}
 .fl{right:calc(50% + 12vw)} .fr{left:calc(50% + 12vw)}
 
-/* сцена: утро */
-.morning{background:var(--ink);color:var(--ivory)}
-.mo-in{height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6vw;padding:0 var(--pad)}
-.mo-c{justify-self:end;height:84vh;width:auto;aspect-ratio:9/16;border-radius:18px;background:#000}
-.mo-t ol{list-style:none;margin-top:26px}
-.mo-t li{padding:18px 0;border-top:1px solid rgba(245,239,233,.16);opacity:.28;transition:opacity .5s var(--ease)}
-.mo-t li.on{opacity:1}
-.mo-t b{display:block;font:400 clamp(44px,5vw,88px)/1 'Bodoni Moda',serif;letter-spacing:-.02em}
-.mo-t span{display:block;margin-top:8px;font-size:18px}
-.morning .eyebrow{color:var(--blush2)}
+/* свежее из Instagram (вместо «утра», 15.10) */
+.insta{padding:clamp(80px,12vh,140px) var(--pad);text-align:center}
+.in-head p:last-child{margin:18px auto 0;max-width:520px;color:var(--smoke)}
+.in-head h2{margin-top:14px}
+.in-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:50px 0 40px}
+.ic{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:6px;background:var(--blush)}
+.ic img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.ic:hover img{transform:scale(1.05)}
 
 /* стена работ */
 .wall{position:relative;padding:clamp(80px,12vh,140px) 0;overflow:hidden}
@@ -287,8 +285,7 @@ html.wiping .wipe{transform:none}
   .film-land .fm{aspect-ratio:1080/640}
   .film:not(.film-land) .fm{width:100%}
   .fl,.fr{position:static;transform:none;display:none}
-  .mo-in{grid-template-columns:1fr;height:auto;padding:70px var(--pad);gap:30px}
-  .mo-c{justify-self:center;height:auto;width:100%;max-width:420px}
+  .in-grid{grid-template-columns:repeat(2,1fr);gap:6px}
   .wall-track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;scrollbar-width:none}
   .wall-track::-webkit-scrollbar{display:none}
   .wc{width:76vw;flex:none;scroll-snap-align:center;margin-top:0!important}

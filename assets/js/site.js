@@ -141,26 +141,6 @@
 
   // закреплённые сцены создаём строго сверху вниз: иначе нижняя считает старт без отступа верхней и наезжает на неё
   const SCENES = {
-    // утро в салоне: прокрутка листает их рилс по кадрам
-    morning(mo) {
-      const cv = $('.mo-c', mo), cx = cv.getContext('2d'), N = 115, frames = [], steps = $$('li', mo);
-      const at = [0, 18, 51, 83];
-      const base = $('link[rel=icon]').href.replace(/img\/bl\.svg$/, 'seq/');
-      let loaded = false, cur = -1;
-      const draw = (i) => { const f = frames[i]; if (f && f.complete && f.naturalWidth) { cx.drawImage(f, 0, 0, cv.width, cv.height); cur = i; } };
-      const load = () => { if (loaded) return; loaded = true;
-        for (let i = 0; i < N; i++) { const im = new Image(); im.src = base + 'f' + String(i + 1).padStart(3, '0') + '.webp'; if (i === 0) im.onload = () => draw(0); frames.push(im); } };
-      ScrollTrigger.create({ trigger: mo, start: 'top 250%', onEnter: load });
-      const st = { i: 0 };
-      gsap.to(st, { i: N - 1, ease: 'none', snap: 'i',
-        scrollTrigger: { trigger: mo, start: 'top top', end: '+=300%', scrub: .5, pin: desktop ? $('.mo-in', mo) : false },
-        onUpdate: () => {
-          const i = Math.round(st.i);
-          if (i !== cur) draw(i);
-          let k = 0; at.forEach((a, j) => { if (i >= a) k = j; });
-          steps.forEach((s, j) => s.classList.toggle('on', j === k));
-        } });
-    },
     // «руки»: мастера зажигаются по одному, счётчик 1 → 2 → 4 → 6 → 10 (и на телефоне)
     hands(hn) {
       const steps = $$('.hn-steps li', hn), n = steps.length;
@@ -206,8 +186,8 @@
         scrollTrigger: { trigger: m.parentNode, containerAnimation: ride, start: 'left right', end: 'right left', scrub: true } }));
     },
   };
-  $$('[data-morning],[data-hands],[data-film],[data-wall]').forEach((el) => {
-    SCENES[['morning', 'hands', 'film', 'wall'].find((k) => el.hasAttribute('data-' + k))](el);
+  $$('[data-hands],[data-film],[data-wall]').forEach((el) => {
+    SCENES[['hands', 'film', 'wall'].find((k) => el.hasAttribute('data-' + k))](el);
   });
 
   if (desktop) {
